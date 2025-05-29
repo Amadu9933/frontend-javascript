@@ -20,23 +20,22 @@ const student2: Student = {
 };
 const studentsList: Student[] = [student1, student2];
 
+// ...existing code...
+
 // Function to render a table
 function renderTable(students: Student[]): void {
   const table = document.createElement("table");
   const headerRow = document.createElement("tr");
 
-  // const table = document.createElement("table");
-  // const headerRow = document.createElement("tr");
+  // Create table headers
+  const headerFirstName = document.createElement("th");
+  headerFirstName.textContent = "First Name";
+  const headerLocation = document.createElement("th");
+  headerLocation.textContent = "Location";
 
-  // // Create table headers
-  // const headerFirstName = document.createElement("th");
-  // headerFirstName.textContent = "First Name";
-  // const headerLocation = document.createElement("th");
-  // headerLocation.textContent = "Location";
-
-  // headerRow.appendChild(headerFirstName);
-  // headerRow.appendChild(headerLocation);
-  //table.appendChild(headerRow);
+  headerRow.appendChild(headerFirstName);
+  headerRow.appendChild(headerLocation);
+  table.appendChild(headerRow);
 
   // Append rows for each student
   students.forEach((student) => {
